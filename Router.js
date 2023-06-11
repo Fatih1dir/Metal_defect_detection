@@ -11,6 +11,7 @@ import FeedBack from "./Components/pages/FeedBackPage/FeedBack";
 import AboutUsPage from "./Components/pages/AboutUsPage/AboutUsPage";
 import CameraPage from "./Components/pages/CameraPage/CameraPage";
 import LoadImagePage from "./Components/pages/LoadImagePage/LoadImage";
+import ScanPage from "./Components/pages/ScanPage/ScanPage";
 
 import Button from "./Components/Button/Button";
 
@@ -51,14 +52,20 @@ const HomeStackScreen =() => {
         options={{ title: "Help" }}
       />
       <Stack.Screen
+        
         name="CameraPage"
         component={CameraPage}
-        options={{ title: "Camera" }}
+        options={{ title: "Camera" ,headerShown:false }}
       />
       <Stack.Screen
         name="LoadImagePage"
         component={LoadImagePage}
         options={{ title: "Gallery" }}
+      />
+      <Stack.Screen
+        name="ScanPage"
+        component={ScanPage}
+        options={{ title: "Scan Page" }}
       />
       
     </Stack.Navigator>

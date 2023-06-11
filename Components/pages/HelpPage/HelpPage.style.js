@@ -10,4 +10,24 @@ export default StyleSheet.create({
         fontWeight:'bold',
         fontStyle:'italic'
     },
+    textStyle:{
+        fontSize:17
+      },
+      sendFeedbackBtn: {
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        alignItems:'center',
+        borderRadius: 5,
+        padding: 10,
+        marginTop: 20,
+        borderWidth:1,
+      },
+      sendIconContainer:{
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        right:0,
+        justifyContent: 'center',
+        paddingRight: 10,
+      },
 });
