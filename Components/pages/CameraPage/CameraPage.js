@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { useEffect, useRef, useState } from "react";
 import { Camera } from "expo-camera";
-import { shareAsync } from "expo-sharing";
 import * as MediaLibrary from "expo-media-library";
 import styles from "./CameraPage.style";
 import Button1 from "../../Button/Button";

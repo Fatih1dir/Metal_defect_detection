@@ -12,6 +12,7 @@ import AboutUsPage from "./Components/pages/AboutUsPage/AboutUsPage";
 import CameraPage from "./Components/pages/CameraPage/CameraPage";
 import LoadImagePage from "./Components/pages/LoadImagePage/LoadImage";
 import ScanPage from "./Components/pages/ScanPage/ScanPage";
+import PrevScans from "./Components/pages/PrevScans/PrevScans";
 
 import Button from "./Components/Button/Button";
 
@@ -73,22 +74,63 @@ const HomeStackScreen =() => {
 }
 const FeedBackStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "grey",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+      headerTitleAlign: "center",
+    }}>
         <Stack.Screen
         name="FeedBackPage"
         component={FeedBack}
-        options={{ title: "FeedBack" }}
+        options={{ title: "FeedBack"}}
       />
     </Stack.Navigator>
   )
 }
 const AboutUsStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "grey",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+      headerTitleAlign: "center",
+    }}>
         <Stack.Screen
         name="AboutUsPage"
         component={AboutUsPage}
         options={{ title: "About Us" }}
+      />
+    </Stack.Navigator>
+  )
+}
+const PreviousScanStack=()=> {
+  return (
+    <Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: "grey",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+      },
+      headerTitleAlign: "center",
+    }}>
+        <Stack.Screen
+        name="PrevScans"
+        component={PrevScans}
+        options={{ title: "Previous Scans" }}
       />
     </Stack.Navigator>
   )
@@ -115,6 +157,7 @@ const App = () => {
         <Drawer.Screen name="Home" component={HomeStackScreen} />
         <Drawer.Screen name="Send Feedback" component={FeedBackStack} />
         <Drawer.Screen name="About Us" component={AboutUsStack} />
+        <Drawer.Screen name="Previous Scans" component={PreviousScanStack} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
